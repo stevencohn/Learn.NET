@@ -1,0 +1,9 @@
+$<c:\crash\setup.txt
+.cmdtree c:\crash\cmdtree.txt
+
+sxe ld:clrjit.dll
+
+!soe -create System.IO.DirectoryNotFoundException 1
+!soe -create TestDummy.Tests.RandomAccessException 1
+
+.foreach (addr {!dumpheap -stat -type Dummy -short}) { !gcwhere addr }

@@ -1,0 +1,18 @@
+﻿<Counters>
+	<counter category="Process" name="% Processor Time" type="proctime" />
+	<counter category="Process" name="Thread Count" type="long" />
+	<counter category="Process" name="Handle Count" type="long" />
+	<counter category=".NET CLR Memory" name="# of Sink Blocks in use" type="long" />
+	<counter category="Process" name="Private Bytes" type="long" />
+	<counter category=".NET CLR Memory" name="# Bytes in all Heaps" type="long" />
+	<counter category=".NET CLR Memory" name="# Gen 0 Collections" type="long" />
+	<counter category=".NET CLR Memory" name="# Gen 1 Collections" type="long" />
+	<counter category=".NET CLR Memory" name="# Gen 2 Collections" type="long" />
+	<counter category=".NET CLR Memory" name="Gen 0 heap size" type="long" />
+	<counter category=".NET CLR Memory" name="Gen 1 heap size" type="long" />
+	<counter category=".NET CLR Memory" name="Gen 2 heap size" type="long" />
+	<counter category=".NET CLR Memory" name="Finalization Survivors" type="long" />
+	<counter category=".NET CLR Memory" name="Large Object Heap size" type="long" />
+	<counter category=".NET CLR Memory" name="Promoted Memory from Gen 0" type="long" />
+	<counter category=".NET CLR Memory" name="Promoted Memory from Gen 1" type="long" />
+</Counters>

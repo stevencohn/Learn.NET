@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FinalizerBlock_Help" xml:space="preserve">
+    <value>Create a number of objects that will block the fReachable queue.</value>
+  </data>
+  <data name="FinalizerBlock_Hint" xml:space="preserve">
+    <value>Go into the light.  Don't be afraid of the light.</value>
+  </data>
+  <data name="FinalizerBlock_Name" xml:space="preserve">
+    <value>Module 4 Finalizer: Blocked</value>
+  </data>
+  <data name="FinalizerSupressed_Help" xml:space="preserve">
+    <value>Demonstrate proper implementation of the Dispose pattern with a finalizer</value>
+  </data>
+  <data name="FinalizerSupressed_Hint" xml:space="preserve">
+    <value>This is how you do it</value>
+  </data>
+  <data name="FinalizerSupressed_Name" xml:space="preserve">
+    <value>Module 4 Finalizer: Supressed</value>
+  </data>
+  <data name="FinalizerUnsupressed_Help" xml:space="preserve">
+    <value>Demonstrate improper implementation of the Dispose pattern with a finalizer</value>
+  </data>
+  <data name="FinalizerUnsupressed_Hint" xml:space="preserve">
+    <value>This is not how you do it</value>
+  </data>
+  <data name="FinalizerUnsupressed_Name" xml:space="preserve">
+    <value>Module 4 Finalizer: Unsupressed</value>
+  </data>
+  <data name="GCCollect_Help" xml:space="preserve">
+    <value>Invoke GC.Collect() once.  Watch finalizable objects move from the Finalization queue to the fReachable queue.</value>
+  </data>
+  <data name="GCCollect_Name" xml:space="preserve">
+    <value>Utility: GC.Collect()</value>
+  </data>
+  <data name="GenHeaps_Help" xml:space="preserve">
+    <value>Follow an object across generations</value>
+  </data>
+  <data name="GenHeaps_Name" xml:space="preserve">
+    <value>Module 1: Generational Tracking</value>
+  </data>
+  <data name="HangOnDeadlock_Help" xml:space="preserve">
+    <value>Spin up a number of threads that create a dead-lock situation</value>
+  </data>
+  <data name="HangOnDeadlock_Hint" xml:space="preserve">
+    <value>Ever get caught in grid-lock traffic.  I hate that!</value>
+  </data>
+  <data name="HangOnDeadlock_Name" xml:space="preserve">
+    <value>Module 3 Hang: Deadlock</value>
+  </data>
+  <data name="HangOnHighCPU_Help" xml:space="preserve">
+    <value>Spin up a number of threads that do lots of work</value>
+  </data>
+  <data name="HangOnHighCPU_Hint" xml:space="preserve">
+    <value>Sometimes it's tough to get a word in edge-wise.  Who's the chatter bug?</value>
+  </data>
+  <data name="HangOnHighCPU_Name" xml:space="preserve">
+    <value>Module 3 Hang: High CPU</value>
+  </data>
+  <data name="HangOnLowCPU_Help" xml:space="preserve">
+    <value>Spin up a number of threads that do little work for a long time.</value>
+  </data>
+  <data name="HangOnLowCPU_Hint" xml:space="preserve">
+    <value>You may wait a while for this one.  What's it doing?  Anything?</value>
+  </data>
+  <data name="HangOnLowCPU_Name" xml:space="preserve">
+    <value>Module 3 Hang: Low CPU</value>
+  </data>
+  <data name="LeakManaged_Help" xml:space="preserve">
+    <value>Leak blocks of managed data on a separate thread.</value>
+  </data>
+  <data name="LeakManaged_Hint" xml:space="preserve">
+    <value>The ship is going down and all you can do is play music?</value>
+  </data>
+  <data name="LeakManaged_Name" xml:space="preserve">
+    <value>Module 2 Leak: Managed</value>
+  </data>
+  <data name="LeakUnmanaged_Help" xml:space="preserve">
+    <value>Leak blocks of unmanaged data on a separate thread.</value>
+  </data>
+  <data name="LeakUnmanaged_Hint" xml:space="preserve">
+    <value>The ship is going down and all you can do is play Win32 music?</value>
+  </data>
+  <data name="LeakUnmanaged_Name" xml:space="preserve">
+    <value>Module 2 Leak: Unmanaged</value>
+  </data>
+  <data name="ManagedException_Help" xml:space="preserve">
+    <value>Raise a managed exception.  What is the exception, which function raised it, and what was the reason?</value>
+  </data>
+  <data name="ManagedException_Hint" xml:space="preserve">
+    <value>Without exception, this is an exception</value>
+  </data>
+  <data name="ManagedException_Name" xml:space="preserve">
+    <value>Module 5: Raise Managed Exception</value>
+  </data>
+  <data name="ManagedObject_Help" xml:space="preserve">
+    <value>Create some objects for investigation.  Which function created them? What values do they store?</value>
+  </data>
+  <data name="ManagedObject_Name" xml:space="preserve">
+    <value>Module 1: Create Managed Objects</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="PerfCounters" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>perfcounters.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="PerformanceAnalysis_Help" xml:space="preserve">
+    <value>Run a performance analysis for this machine and report the results</value>
+  </data>
+  <data name="PerformanceAnalysis_Name" xml:space="preserve">
+    <value>Utility: Performance Analysis</value>
+  </data>
+  <data name="RunningMan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>runningman.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SpinUpThreads_Help" xml:space="preserve">
+    <value>Spin up 5 managed and 5 thread pool threads and then break.  Which method created these threads?  Which object owns them?</value>
+  </data>
+  <data name="SpinUpThreads_Hint" xml:space="preserve">
+    <value>This mysterious tapestry will leave you frayed.  Follow the clues to determine the problem.</value>
+  </data>
+  <data name="SpinUpThreads_Name" xml:space="preserve">
+    <value>Module 1: Spin up Threads</value>
+  </data>
+</root>

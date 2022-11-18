@@ -1,0 +1,62 @@
+windbg ANSI Command Tree 1.0
+title {"WinDbg/PSSCOR4(SOS)/SOSEX Commands"}
+body
+{"Instructions"}
+ {"Placed this file in WinDbg.exe folder and load with the command: '.cmdtree cmdtree.txt'"} {" "}
+ {"Copy PSSCOR4 & SOSEX into x86 or x64 folders beneath C:\Windows\Microsoft .NET\<ver>"} {" "}
+ {"(NOTE: psscor4 does not work with .NET 4.5!  Must use SOS until a new release)"} {" "}
+ {"(HINT: if you save your Workspace you only need to issue the following commands once!)"} {" "}
+ {"1. Add UNIFI source and symbol paths with commands similar to:"} {" "}
+ {"    .sympath srv*c:\symbols*http://msdl.microsoft.com/downloads/symbols"} {".sympath srv*c:\symbols*http://msdl.microsoft.com/downloads/symbols"}
+ {"    .sympath+ c:\everest\server\bin"} {".sympath+ c:\everest\server\bin"}
+ {"    .srcpath c:\everest\tree"} {".srcpath c:\everest\tree"}
+ {"2. Load PSSCOR4 & SOSEX by double-clicking 'Load SOSex|PSSCOR4' in Setup section below"} {" "}
+ {"3. Save your workspace; it will automatically load next time you run WinDbg"} {" "}
+{"Setup"}
+ {"Show symbol path..... ..... [.sympath]"} {".sympath"}
+ {"Load SOSex|PPSCOR4... ..... [.loadby sosex clr;.loadby psscor4 clr]"} {".loadby sosex clr;.loadby psscor4 clr"}
+ {"Load SOSex|SOS....... ..... [.loadby sosex clr;.loadby sos clr]"} {".loadby sosex clr;.loadby sos clr"}
+ {"Command Help......... ..... [.help]"} {".help"}
+ {"PSSCOR4(SOS) Help.... sos   [!sos.help]"} {"!sos.help"}
+ {"SOSex Help........... sosex [!sosex.help]"} {"!sosex.help"}
+ {"Prefer DML........... ..... [.prefer_dml 1]"} {".prefer_dml 1"}
+{"Modules"}
+ {"All Modules.......... ..... [lm D sm]"} {"lm D sm"}
+ {"Loaded Modules....... ..... [lmo D sm]"} {"lmo D sm"}
+ {"Loaded Mods, verbose. ..... [lmvo D sm]"} {"lmvo D sm"}
+ {"Modules w/o symbols.. ..... [lme D sm]"} {"lme D sm"}
+{"Threads"}
+ {"Managed Threads...... sos.. [!threads]"} {"!threads"}
+ {"Native Threads....... ..... [~]"} {"~"}
+ {"Thread Pool Threads.. sos.. [!threadpool]"} {"!threadpool"}
+ {"SyncBlock Deadlocks.. sosex [!dlk]"} {"!dlk"}
+{"Stacks"}
+ {"Managed Stack........ sos   [!clrstack]"} {"!clrstack"}
+ {"- Params and Locals.. psc.. [!vars -w]"} {"!vars -w"}
+ {"Native Stack......... ..... [kP]"} {"kP"}
+ {"Current Stack........ sos   [!dumpstack]"} {"!dumpstack"}
+ {"All Managed Stacks... ..... [~*e!clrstack]"} {"~*e!clrstack"}
+ {"- Params and Locals.. ..... [~*e!vars -w]"} {"~*e!vars -w"}
+ {"All Native Stacks.... ..... [~*kP]"} {"~*kP"}
+ {"All Dump Stacks...... sos   [!eestack]"} {"!eestack"}
+{"Memory"}
+ {"Address summary...... sosex [!address -summary]"} {"!address -summary"}
+ {"Create heap index.... sosex [!bhi]"} {"!bhi"}
+ {"Finalize queue....... sosex [!finq]"} {"!finq"}
+ {"Finalize stats....... sosex [!finq -stat]"} {"!finq -stat"}
+ {"fReachable queue..... sosex [!frq]"} {"!frq"}
+ {"fReachable stats..... sosex [!frq -stat]"} {"!frq -stat"}
+ {"Stack Objects........ sos   [!dso]"} {"!dso"}
+ {"GC Heap.............. sos   [!eeheap -gc]"} {"!eeheap -gc"}
+ {"Loader Heap.......... sos   [!eeheap -loader]"} {"!eeheap -loader"}
+ {"Native Heap.......... ..... [!heap -s]"} {"!heap -s"}
+ {"Heap Stats........... sos   [!dumpheap -stat]"} {"!dumpheap -stat"}
+ {"Objects > 500 bytes.. sos   [!dumpheap -min 500]"} {"!dumpheap -min 500"}
+ {"Objects > 1K bytes... sos   [!dumpheap -min 1000]"} {"!dumpheap -min 1000"}
+ {"Gen 2 Objects........ sosex [!dumpgen 2 -stat]"} {"!dumpgen 2 -stat"}
+{"Memory Hints"}
+ {"!dumpheap -stat -type MyType : show stats for MyType objects, note MT column"} {" "}
+ {"!dumpheap -mt <MT> : show instances for MT value, note Addr column"} {" "}
+ {"!do <Addr> : show details for instance at address Addr, note Value column"} {" "}
+ {"!do <ValueAddr> or !da <ArrayAddr> ..."} {" "}
+

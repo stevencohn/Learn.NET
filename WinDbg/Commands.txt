@@ -1,0 +1,87 @@
+http://www.microsoft.com/en-us/download/details.aspx?id=35370
+
+http://www.microsoft.com/en-us/download/details.aspx?id=28567
+
+
+0:000> !DumpMD /d 000007fe97af1388
+Method Name:  TestDummy.Tests.GCCollect.Execute(TestDummy.IController, Boolean)
+Class:        000007fe97a684e0
+MethodTable:  000007fe97af1398
+mdToken:      000000000600003c
+Module:       000007fe97952f90
+IsJitted:     no
+CodeAddr:     ffffffffffffffff
+Transparency: Critical
+0:000> !name2ee TestDummy!TestDummy.Tests.GCCollect.Execute
+Module:      000007fe97952f90
+Assembly:    TestDummy.exe
+Token:       000000000600003c
+MethodDesc:  000007fe97af1388
+Name:        TestDummy.Tests.GCCollect.Execute(TestDummy.IController, Boolean)
+Not JITTED yet. Use !bpmd -md 000007fe97af1388 to break on run.
+
+ 
+
+*****Commands******************
+
+!runaway  :: List all threads with time. advantage in high cpu analysis to identify threads taking long time 
+~         :: display all threads
+~2s       :: switching to thread 2
+kb        :: native call stack for current thread
+~*kb      ::  native call stack for all threads
+
+
+---------------------------managed Commands------------------------------------------------
+
+lmvm clr        ::  Get the loaded CLR module version ( used in .NET 4.x application dump 
+lmvm mscorwks   ::  Get the loaded CLR module version ( used in .NET 2.x application dump 
+.chain          ::  Lists all debugger extensions
+.loadby sos clr ::  loads the SOS of the relevent CLR
+.unload C:\Windows\Microsoft.NET\Framework\v4.0.30319\SOS       ::  Unload the SOS dll
+.load C:\Windows\Microsoft.NET\Framework\v4.0.30319\SOS         ::  load the SOS dl!threadpool     ::  Threadpool info. have additional infor for timers,CPU utilization etc
+!clrstack       ::  The managed call stack for current thread
+!clrstack -p    ::  Current thread stack with parameters
+!dumpstack -ee  ::  Listing both native and managed stacks
+~*e!clrstack    ::  Stacks of all threads. usually used while searching or filtering
+.write_cmd_hist C:\LabFiles\help\cmd1.txt ::  
+.logopen C:\LabFiles\help\LogData.txt ::  Open the log file. The log file contains command and their outputs
+.logclose ::
+
+ 
+*****************************************************Dump assembly, module Commands*****************************************************
+
+!eeheap -loader :: Print the size of loader heap (size of internal structures)
+!eeheap -gc :: Print the size of gc heap Gen 0 ,gen 1,G2n 2 and LOH
+!dumpdomain 011c8728 : !dumpdomain <domain name>  Lists the assemblies of the domain
+!dumpassembly 011ec970 : !dumpassembly <Assembly address> Print the number of modules associated
+!dumpmodule -mt 01372e94 : !dumpmodule -mt <Module address> Prints all types (classes) associated in the module
+.shell -i - -ci "!dumpdomain" FIND /c "(Dynamic)" :: listing how many dynamic assemblies in the domain
+
+
+*****************************************************Commands*****************************************************
+
+!dumpheap -stat :: view managed heap of all types order by size
+!dumpheap -stat -type System.Byte[] :: managed heap for a particular type
+!dumpheap -stat -min 85000 :: List all objects in heap crossing a particular size
+!dumpheap -stat -type MyObject :: managed heap for a particular type
+!dso :: show stack objects
+
+
+---------------------------To print member variables and values of an object-------------------------
+
+!do 0x10e8d84          :: Show a managed object content
+!do poi(0x10e8d84 + 8) :: To print the child object !do (poi( address of parent + child member offset)
+!da 024c92cc           :: To print array.
+!da -details 024c92cc  :: To print each array members.
+ 
+
+---------------------------EE Class, Method table , Method description -------------------------
+
+!dumpheap -stat -type MyObject :: managed heap for a particular type
+!name2ee NetDebugDemos.exe  NetDebugDemos.MyObject ::  to get method table structure and EEClass structure
+!dumpheap -mt 00e88194  ::  !dumpheap -mt <methodTable address>  will print addresses of all objects having same MethodTable
+!dumpmt -md 00e88194  ::  !dumpmt -md <methodTable address>  will print all method descriptions of the MethodTable
+!dumpmd 010b8194  ::  !dumpmd <methodDesc address>  print the details of the method (jitted,code address etc)
+!eeheap -loader  ::  low and high freqency heaps
+Proc dump : http://technet.microsoft.com/en-us/sysinternals/dd996900.aspx
+Adplus : http://support.microsoft.com/kb/286350

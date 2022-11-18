@@ -1,0 +1,3 @@
+.prefer_dml 1
+.sympath srv*c:\symbols*http://msdl.microsoft.com/downloads/symbols
+.loadby sosex clr;.loadby sos clr; .reload
