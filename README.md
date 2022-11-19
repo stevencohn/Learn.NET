@@ -1,14 +1,14 @@
-# Kernel.NET
+# Learn.NET
 Learn how .NET garbage collection works and how to debug crashes
 
 ## Slide Decks
 Self-paced and chock full of great information
 
-### Kernel.NET Part 1 .NET GC
+### Learn.NET Part 1 .NET GC
 Walks through all the details of how the .NET Garbage Collector actually works and
 points out some best practices to make your .NET apps sing.
 
-### Kernel.NET Part 2 WinDbg
+### Learn.NET Part 2 WinDbg
 A deep dive into advanced .NET debugging using the infamous WinDbg tool. Not for
 the faint of heart. The file assets mentioned in this deck are located under the WinDbg folder.
 
