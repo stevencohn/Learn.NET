@@ -13,7 +13,7 @@ A deep dive into advanced .NET debugging using the infamous WinDbg tool. Not for
 the faint of heart. The file assets mentioned in this deck are located under the WinDbg folder.
 
 ## Labs
-Get your hands dirty rustling around the garbage
+Get your hands dirty rustling through the garbage
 
 ### [Crash Lab](./CrashLab/)
 The CrashLab project is an exploration of thirteen devious ways to crash a .NET application.
